@@ -12,7 +12,7 @@ import AddDeposit from './components/Dashboard/AddDeposit/AddDeposit';
 import DepositHistory from './components/Dashboard/DepositHistory/DepositHistory';
 import Login from './components/Authentication/Login';
 import Registration from './components/Authentication/Registration';
-import Extra from './components/Authentication/extra';
+import Extra from './components/Authentication/Extra';
 
 function App() {
   return (

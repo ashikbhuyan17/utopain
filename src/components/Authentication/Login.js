@@ -1,6 +1,6 @@
 import React from 'react';
 import './Login.css'
-import IMG from '../../images/IMG.png'
+import IMG1 from '../../images/IMG.png'
 import { Link } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
@@ -23,7 +23,7 @@ const Login = () => {
                     <div className="">
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input className="input-field" {...register("email", { required: true })} name="email" placeholder="Email/Username" required />
-                            
+
                             <input className="input-field" type="password" {...register("password", { required: true })} name="password" id="" placeholder="Password" required />
                             <div className="checkbox-forget">
                                 <div>
@@ -31,7 +31,7 @@ const Login = () => {
                                     <label className="px-2" for="newUser">Keep Me Login</label>
                                 </div>
                                 <div>
-                                    <a href="">Forget password</a>
+                                    <Link>Forget password</Link>
                                 </div>
                             </div>
                             <button type="submit" name="submit" className="button login">Login</button>
@@ -51,7 +51,7 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
-                <img src={IMG} className="bg" />
+                <img src={IMG1} className="bg" alt="description" />
             </div>
 
             <div className="register-container">

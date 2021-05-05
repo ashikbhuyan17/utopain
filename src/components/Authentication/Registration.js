@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import IMG from '../../images/IMG.png'
 import './Registration.css'
 
@@ -8,11 +8,10 @@ const Registration = () => {
     const { register, formState: { errors }, handleSubmit, watch } = useForm({});
     const password = useRef({});
     password.current = watch("password", "");
-    const history = useHistory()
-    const onSubmit = async data => {
+    const onSubmit = async (data, e) => {
         console.log(data);
         // alert(JSON.stringify(data));
-        history.push('/login')
+        e.target.reset();
     };
     return (
         <div class="login-form-container">
@@ -64,7 +63,7 @@ const Registration = () => {
                                     <label for="newUser" class="px-2">Accepts all terms and condition</label>
                                 </div>
                                 <div>
-                                    <a href="">Forget password</a>
+                                    <Link>Forget password</Link>
                                 </div>
                             </div>
                             <button type="submit" class="button login">Login</button>
@@ -84,7 +83,7 @@ const Registration = () => {
                         </div> */}
                     </div>
                 </div>
-                <img src={IMG} class="bg" />
+                <img src={IMG} class="bg" alt="description" />
             </div>
 
             <div class="register-container">
