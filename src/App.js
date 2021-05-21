@@ -1,46 +1,25 @@
-import React from 'react'
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Profile from './components/Dashboard/Profile/Profile';
-import Dashboard from './components/Dashboard/Dashboard/Dashboard';
-import AddDeposit from './components/Dashboard/AddDeposit/AddDeposit';
-import DepositHistory from './components/Dashboard/DepositHistory/DepositHistory';
-import Login from './components/Authentication/Login';
-import Registration from './components/Authentication/Registration';
-import Extra from './components/Authentication/Extra';
+import React, { useEffect, useState } from 'react'
+import HandleRouter from './components/Router/HandleRouter'
+export const UserContext = React.createContext();
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
+
+
+  // useEffect(() => {
+  //   const data = localStorage.getItem('token')
+  //   if (data) {
+  //     setLoggedInUser(JSON.parse(data))
+  //   }
+  //   console.log(data);
+
+  // }, [])
+
+
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Dashboard />
-        </Route>
-        <Route path="/profile">
-          <Profile />
-        </Route>
-        <Route path="/addDeposit">
-          <AddDeposit />
-        </Route>
-        <Route path="/depositHistory">
-          <DepositHistory />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/registration">
-          <Registration />
-        </Route>
-        <Route path="/extra">
-          <Extra />
-        </Route>
-      </Switch>
-    </Router>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <HandleRouter />
+    </UserContext.Provider>
   );
 }
 

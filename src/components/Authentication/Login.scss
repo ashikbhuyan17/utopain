@@ -1,7 +1,15 @@
+@import '../../styles/colour';
+@import '../../styles/font-definition';
+
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  .space{
+    margin-top: 60px;
+    padding-bottom: 10px;
   }
   .login-form-container {
     display: grid;
@@ -27,41 +35,40 @@ body {
   .register-container {
     text-align: center;
     height: 100vh;
-    background-image: url(../../images//IMG_2611.PNG);
+    background-image: url(../../images/IMG_2611.PNG);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
-    background-color: #7432f3;
+    background-color:#6844ED;
   }
   .caption {
-    color: #fff;
+    color: $button-color;
     margin-top: 150px;
   }
   
   .welcome-header {
     margin: 30px 0;
   }
-  .utho-pain {
-    color: #5620b0 !important;
-    font-size: 28px;
+  .uto-pain {
+    color: $uto-pain-color !important;
+    font-size: $uto-pain-size;
   }
   .pain {
-    font-size: 28px;
+    font-size: $uto-pain-size;
+  }
+  .welcome{
+    font-size: $largest-font-size;
+    line-height: 47.88px;
+    font-weight: 600px;
   }
   .input-field {
     border-radius: 25px;
     width: 100%;
     outline: none;
     border: none;
-    background-color: rgb(235, 233, 233);
+    background-color: $input-background-color;
     padding: 10px 12px;
     margin-bottom: 20px;
-  }
-  .input-first-last-name{
-    display: flex;
-  }
-  .input-first-name{
-    margin-right: 10px;
   }
   .checkbox-forget {
     display: flex;
@@ -78,62 +85,60 @@ body {
     height: 100%;
     border: none;
     outline: none;
-    padding: 11px 10px;
-    color: #fafafa;
-    font-size: 13px;
+    padding: 8px 9px;
+    color: $button-color;
+    font-size: $small-font-size;
     font-weight: 600;
-    border-radius: 20px;
+    border-radius: 73px;
     margin-top: 22px;
   }
-  .facebook-btn {
-    background-color: #3a66c4 !important;
-  }
-  .google {
-    background-color: #cf4331 !important;
-  }
+  // .facebook-btn {
+  //   background-color: #3a66c4 !important;
+  // }
+  // .google {
+  //   background-color: #cf4331 !important;
+  // }
   .login {
-    background-color: #6d37ef;
+    background: linear-gradient(90.82deg, $login-background1 14.22%, $login-background2 96.31%);
+   
   }
   .form-section {
     padding: 100px 0;
   }
   
-  .social-icon p {
-    color: #8e8e8ec7;
-    font-size: 12px;
-    font-weight: 500;
-  }
+  
   .caption button {
     border: none;
     margin: 10px 0;
     display: inline-block;
     padding: 8px 60px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: $small-font-size;
     font-weight: 600;
-    color: #215ddf;
+    color: $caption-color;
+    font: Segoe UI;
+    font-style: normal;
+    background: linear-gradient(90.82deg, $button-color 14.22%, $button-color 96.31%);
   }
   .space-between input {
     display: inline-block;
     width: 16px;
   }
   label {
-    font-size: 12px;
+    font-size: $small-font-size;
     position: relative;
-    bottom: 3px;
+    // bottom: 3px;
     font-weight: 600;
-    color: #524f4f;
+    color: $check-box-color;
+    line-height: 20px;
   }
-  .forgot-password-section a {
-    color: #5a5959;
-    font-size: 13px;
-    font-weight: 500;
-  }
-  .social-icon p {
-    color: #8e8e8ef7;
-    font-size: 12px;
-    font-weight: 500;
-  }
+ .forget-password{
+   font-size: $small-font-size;
+   line-height: 20px;
+   letter-spacing:0.25 px;
+   color: $check-box-color;
+ }
+  
   @media only screen and (max-width: 768px) {
     .login-form-container {
       grid-template-columns: repeat(1, 1fr);
